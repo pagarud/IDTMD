@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="truthtable_padding_top">64dp</dimen>
+    <dimen name="land_truthtable_padding_top">24dp</dimen>
+    <dimen name="table_font">24sp</dimen>
+</resources>

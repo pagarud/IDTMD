@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/button_submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/conjunction"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayoutGrid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_title">
+
+        <TextView
+            android:id="@+id/text_label_1"
+            android:layout_width="227dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/letter_a"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_label_2"
+            android:layout_width="228dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/letter_b"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/text_label_1"
+            app:layout_constraintStart_toEndOf="@+id/text_label_1"
+            app:layout_constraintTop_toTopOf="@+id/text_label_1" />
+
+        <TextView
+            android:id="@+id/text_label_3"
+            android:layout_width="228dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/conjunction_a_b"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/text_label_2"
+            app:layout_constraintStart_toEndOf="@+id/text_label_2"
+            app:layout_constraintTop_toTopOf="@+id/text_label_2" />
+
+        <TextView
+            android:id="@+id/text_truthvalue_00"
+            android:layout_width="227dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/land_truthtable_padding_top"
+            android:text="@string/symbol_true"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_label_1" />
+
+        <TextView
+            android:id="@+id/text_truthvalue_01"
+            android:layout_width="228dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/symbol_true"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_truthvalue_00"
+            app:layout_constraintStart_toEndOf="@+id/text_truthvalue_00" />
+
+
+        <EditText
+            android:id="@+id/edittext_answer_3"
+            android:layout_width="228dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/auto_fill_answer"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/text_truthvalue_01"
+            app:layout_constraintStart_toEndOf="@+id/text_truthvalue_01"
+            app:layout_constraintTop_toTopOf="@+id/text_truthvalue_01"
+            tools:targetApi="o" />
+
+        <TextView
+            android:id="@+id/text_truthvalue_10"
+            android:layout_width="227dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/land_truthtable_padding_top"
+            android:text="@string/symbol_true"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_truthvalue_00" />
+
+        <TextView
+            android:id="@+id/text_truthvalue_11"
+            android:layout_width="228dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/symbol_false"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_truthvalue_10"
+            app:layout_constraintStart_toEndOf="@+id/text_truthvalue_10"
+            app:layout_constraintTop_toTopOf="@+id/text_truthvalue_10" />
+
+        <EditText
+            android:id="@+id/edittext_answer_2"
+            android:layout_width="228dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/auto_fill_answer"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/text_truthvalue_11"
+            app:layout_constraintStart_toEndOf="@+id/text_truthvalue_11"
+            app:layout_constraintTop_toTopOf="@+id/text_truthvalue_11" />
+
+
+        <TextView
+            android:id="@+id/text_truthvalue_20"
+            android:layout_width="227dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/land_truthtable_padding_top"
+            android:text="@string/symbol_false"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_truthvalue_10" />
+
+        <TextView
+            android:id="@+id/text_truthvalue_21"
+            android:layout_width="228dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/symbol_true"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_truthvalue_20"
+            app:layout_constraintStart_toEndOf="@+id/text_truthvalue_20"
+            app:layout_constraintTop_toTopOf="@+id/text_truthvalue_20" />
+
+        <EditText
+            android:id="@+id/edittext_answer_3"
+            android:layout_width="228dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/auto_fill_answer"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/text_truthvalue_21"
+            app:layout_constraintStart_toEndOf="@+id/text_truthvalue_21"
+            app:layout_constraintTop_toTopOf="@+id/text_truthvalue_21" />
+
+        <TextView
+            android:id="@+id/text_truthvalue_30"
+            android:layout_width="227dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/land_truthtable_padding_top"
+            android:text="@string/symbol_false"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_truthvalue_20" />
+
+        <TextView
+            android:id="@+id/text_truthvalue_31"
+            android:layout_width="228dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/symbol_false"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_truthvalue_30"
+            app:layout_constraintStart_toEndOf="@+id/text_truthvalue_30"
+            app:layout_constraintTop_toTopOf="@+id/text_truthvalue_30" />
+
+        <EditText
+            android:id="@+id/edittext_answer_4"
+            android:layout_width="228dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/auto_fill_answer"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/text_truthvalue_31"
+            app:layout_constraintStart_toEndOf="@+id/text_truthvalue_31"
+            app:layout_constraintTop_toTopOf="@+id/text_truthvalue_31" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
