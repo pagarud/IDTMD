@@ -2,21 +2,22 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="nav_header_vertical_spacing">8dp</dimen>
-    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="alpha_apod_whiteonblacktext_08">0.8</dimen>
+    <dimen name="alpha_listitem_datetitleholder_08">0.8</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="font_apod_titleexplantion_18sp">18sp</dimen>
+    <dimen name="fontsize_all_14sp">14sp</dimen>
+    <dimen name="height_listitem_cardview_250dp">250dp</dimen>
     <dimen name="margin_listitem_image_0dp">0dp</dimen>
     <dimen name="margin_listitem_text_8dp">8dp</dimen>
-    <dimen name="height_listitem_cardview_250dp">250dp</dimen>
-    <dimen name="marginstart_listitem_text_16dp">16dp</dimen>
     <dimen name="marginbottom_listitem_text_16dp">16dp</dimen>
-    <dimen name="fontsize_all_14sp">14sp</dimen>
-    <dimen name="font_apod_titleexplantion_18sp">18sp</dimen>
+    <dimen name="marginend_apod_bottomsheet_16dp">16dp</dimen>
+    <dimen name="marginstart_apod_bottomsheet_16dp">16dp</dimen>
+    <dimen name="marginstart_listitem_text_16dp">16dp</dimen>
+    <dimen name="margintop_apod_bottomsheet_16dp">16dp</dimen>
+    <dimen name="marign_all_16dp">16dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <dimen name="peekheight_apodfragment_64dp">64dp</dimen>
     <dimen name="touchtarget_icon_24dp">24dp</dimen>
-    <dimen name="margintop_apod_bottomsheet_16dp">16dp</dimen>
-    <dimen name="marginstart_apod_bottomsheet_16dp">16dp</dimen>
-    <dimen name="marginend_apod_bottomsheet_16dp">16dp</dimen>
-    <dimen name="alpha_apod_whiteonblacktext_08">0.8</dimen>
-    <dimen name="marign_all_16dp">16dp</dimen>
 </resources>

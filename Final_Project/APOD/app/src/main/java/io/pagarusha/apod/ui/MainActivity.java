@@ -8,9 +8,11 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -18,6 +20,8 @@ import io.pagarusha.apod.R;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private final String TAG_ERROR = "ERROR";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,15 +39,12 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
-//        Intent intent = new Intent(MainActivity.this, DetailActivity.class);
-//        intent.putExtra("date", "today");
-//        startActivity(intent);
-
-        FragmentManager fm = getSupportFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-        ApodFragment af = new ApodFragment();
-        ft.add(R.id.framelayout_main_fragmentcontainer, af);
-        ft.commit();
+        // Start navigation on Today's Apod
+        //Get menuItem index 0
+        if (savedInstanceState == null) {
+            MenuItem item =  navigationView.getMenu().getItem(0);
+            onNavigationItemSelected(item);
+        }
 
     }
 
@@ -80,17 +81,16 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        Fragment fragment = null;
 
         if (id == R.id.nav_today) {
-            Intent intent = new Intent(MainActivity.this, DetailActivity.class);
-            intent.putExtra("today", "today");
-            startActivity(intent);
+            fragment = new ApodFragment();
         } else if (id == R.id.nav_gallery) {
+            fragment = new GalleryFragment();
 
         } else if (id == R.id.nav_favorites) {
 
@@ -98,8 +98,21 @@ public class MainActivity extends AppCompatActivity
 
         }
 
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
+        if (fragment != null) {
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.replace(R.id.framelayout_main_fragmentcontainer, fragment);
+            ft.commit();
+
+            item.setChecked(true);
+            setTitle(item.getTitle());
+
+            DrawerLayout drawer = findViewById(R.id.drawer_layout);
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            Log.e(TAG_ERROR, "Failed to create fragment");
+        }
+
         return true;
     }
 }

@@ -3,6 +3,8 @@ package io.pagarusha.apod.ui;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.Menu;
 import android.view.MenuItem;
@@ -33,6 +35,11 @@ public class DetailActivity extends AppCompatActivity {
         Apod apod = DummyApod.getApod(); // TODO: remove dummy data
 
         // TODO: start detail fragment
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        ApodFragment af = new ApodFragment();
+        ft.add(R.id.framelayout_detail_fragmentcontainer, af);
+        ft.commit();
     }
 
     @Override

@@ -6,6 +6,9 @@ import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import android.util.AttributeSet;
 
+/**
+ * Custom CardView with square shape.
+ */
 public class SquareCardView extends CardView {
 
     public SquareCardView(@NonNull Context context) {

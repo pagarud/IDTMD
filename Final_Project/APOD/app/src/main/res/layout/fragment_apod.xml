@@ -5,11 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <ImageView
-        android:id="@+id/imageview_apod"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/apod_img_demo" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/progress_apod_loadimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:indeterminate="true"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/primaryLightColor"/>
+
+        <ImageView
+            android:id="@+id/imageview_apod"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
 
 
 
@@ -35,7 +49,7 @@
                 android:id="@+id/text_apod_explanationtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/all_stringplaceholdermedium"
+                android:text=""
                 android:textSize="@dimen/font_apod_titleexplantion_18sp"
                 android:textColor="@color/primaryTextColor"
                 android:alpha="@dimen/alpha_apod_whiteonblacktext_08"
@@ -74,7 +88,8 @@
                     android:layout_margin="@dimen/marign_all_16dp"
                     android:text="@string/all_stringplaceholderlong"
                     android:textColor="@color/primaryTextColor"
-                    android:textSize="@dimen/font_apod_titleexplantion_18sp" />
+                    android:textSize="@dimen/font_apod_titleexplantion_18sp"
+                    android:alpha="@dimen/alpha_apod_whiteonblacktext_08" />
 
                 <TextView
                     android:id="@+id/text_apod_imagecredits"
@@ -83,7 +98,8 @@
                     android:layout_margin="@dimen/marign_all_16dp"
                     android:text="@string/all_stringplaceholdermedium"
                     android:textColor="@color/primaryTextColor"
-                    android:textSize="@dimen/font_apod_titleexplantion_18sp" />
+                    android:textSize="@dimen/font_apod_titleexplantion_18sp"
+                    android:alpha="@dimen/alpha_apod_whiteonblacktext_08" />
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
 
