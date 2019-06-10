@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">APOD</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="all_share">Share</string>
+
+    <string name="menu_today">Today\'s APOD</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_favorites">Favorites</string>
+    <string name="menu_about">About APOD</string>
+    <string name="all_date">YYYY-MM-DD</string>
+    <string name="all_title">Title</string>
+    <string name="all_image">Image</string>
+    <string name="all_stringplaceholderlong">Why does the shadow of this volcano look like a triangle? The Mount Teide volcano itself does not have the strictly pyramidal shape that its geometric shadow might suggest.  The triangle shadow phenomena is not unique to the Mt. Teide, though, and is commonly seen from the tops of other large mountains and volcanoes. A key reason for the strange dark shape is that the observer is looking down the long corridor of a sunset (or sunrise) shadow that extends to the horizon. Even if the huge volcano were a perfect cube and the resulting shadow were a long rectangular box, that box would appear to taper off at its top as its shadow extended far into the distance, just as parallel train tracks do. The featured spectacular image shows Pico Viejo crater in the foreground, located on Tenerife in the Canary Islands of Spain. The nearly full moon is seen nearby shortly after its total lunar eclipse.   Explore the Universe: Random APOD GeneratorWhy does the shadow of this volcano look like a triangle? The Mount Teide volcano itself does not have the strictly pyramidal shape that its geometric shadow might suggest.  The triangle shadow phenomena is not unique to the Mt. Teide, though, and is commonly seen from the tops of other large mountains and volcanoes. A key reason for the strange dark shape is that the observer is looking down the long corridor of a sunset (or sunrise) shadow that extends to the horizon. Even if the huge volcano were a perfect cube and the resulting shadow were a long rectangular box, that box would appear to taper off at its top as its shadow extended far into the distance, just as parallel train tracks do. The featured spectacular image shows Pico Viejo crater in the foreground, located on Tenerife in the Canary Islands of Spain. The nearly full moon is seen nearby shortly after its total lunar eclipse.   Explore the Universe: Random APOD Generator</string>
+    <string name="all_stringplaceholdermedium">This is a longer string title to test multiline titles.</string>
+</resources>

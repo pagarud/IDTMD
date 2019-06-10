@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/imageview_apod"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/apod_img_demo" />
+
+
+
+    <LinearLayout
+        android:id="@+id/linearlayout_apod_bottomsheetbehavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/primaryColor"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="@dimen/peekheight_apodfragment_64dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/peekheight_apodfragment_64dp"
+            android:orientation="horizontal"
+            android:background="@color/primaryColor"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/text_apod_explanationtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/all_stringplaceholdermedium"
+                android:textSize="@dimen/font_apod_titleexplantion_18sp"
+                android:textColor="@color/primaryTextColor"
+                android:alpha="@dimen/alpha_apod_whiteonblacktext_08"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/marginstart_apod_bottomsheet_16dp"/>
+
+            <ImageView
+                android:id="@+id/btn_apod_bottomsheettoggle"
+                android:layout_width="@dimen/touchtarget_icon_24dp"
+                android:layout_height="@dimen/touchtarget_icon_24dp"
+                android:layout_weight="0"
+                android:textColor="@color/primaryTextColor"
+                android:src="@drawable/ic_keyboard_arrow_up_black_24dp"
+                android:onClick="toggle"
+                android:alpha="@dimen/alpha_apod_whiteonblacktext_08"
+                android:layout_marginEnd="@dimen/marginend_apod_bottomsheet_16dp"
+                android:layout_marginStart="@dimen/marginstart_apod_bottomsheet_16dp"/>
+
+
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_apod_explanation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/marign_all_16dp"
+                    android:text="@string/all_stringplaceholderlong"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/font_apod_titleexplantion_18sp" />
+
+                <TextView
+                    android:id="@+id/text_apod_imagecredits"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/marign_all_16dp"
+                    android:text="@string/all_stringplaceholdermedium"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/font_apod_titleexplantion_18sp" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
