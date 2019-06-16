@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--add movie card-->
+            <include
+                android:id="@+id/include_info_moviedetail"
+                layout="@layout/info_moviedetail" />
+
+            <View
+                android:id="@+id/divider1_moviedetail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_divider_1dp"
+                android:layout_marginTop="@dimen/margin_all_16dp"
+                android:background="?android:attr/listDivider" />
+
+            <!--add plot summary-->
+            <include
+                android:id="@+id/include_summary_moviedetail"
+                layout="@layout/summary_moviedetail" />
+
+            <View
+                android:id="@+id/divider2_moviedetail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_divider_1dp"
+                android:layout_marginTop="@dimen/margin_all_16dp"
+                android:background="?android:attr/listDivider" />
+
+            <!--add trailers-->
+            <!--<include-->
+                <!--android:id="@+id/include_peoplerow"-->
+                <!--layout="@layout/person_rowcontainer" />-->
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

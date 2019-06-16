@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Trailer Addict</string>
+
+    <!-- General -->
+    <string name="all_search">Search</string>
+    <string name="all_discover">Discover</string>
+    <string name="all_favorites">Favorites</string>
+    <!-- End General -->
+
+    <!-- Nav -->
+    <string name="nav_search">Search</string>
+    <string name="nav_discover">Discover</string>
+    <string name="nav_favorites">Favorites</string>
+    <!-- End Nav -->
+
+    <!-- Rows -->
+    <string name="header_movie_row_popular">Popular movies</string>
+    <string name="header_people_row_popular">Popular people</string>
+    <!-- End Rows -->
+
+    <!-- Buttons -->
+    <string name="seeall_button_row">See all</string>
+    <string name="text_placeholder">Doler lorem ipsum</string>
+    <string name="text_plot_summary">Plot summary</string>
+    <!-- End Buttons -->
+
+</resources>

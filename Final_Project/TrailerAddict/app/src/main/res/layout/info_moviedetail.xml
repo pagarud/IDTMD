@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/img_moviedetail_poster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_moviedetail_poster_32dp"
+        android:layout_marginTop="@dimen/margin_moviedetail_poster_32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/poster" />
+
+    <TextView
+        android:id="@+id/title_moviedetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_moviedetail_poster_32dp"
+        android:layout_marginTop="@dimen/margintop_info_moviedetail_8dp"
+        android:text="@string/text_placeholder"
+        app:layout_constraintStart_toEndOf="@+id/img_moviedetail_poster"
+        app:layout_constraintTop_toTopOf="@+id/img_moviedetail_poster" />
+
+    <TextView
+        android:id="@+id/text_moviedetail_releasedate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margintop_info_moviedetail_8dp"
+        android:text="@string/text_placeholder"
+        app:layout_constraintStart_toStartOf="@+id/title_moviedetail"
+        app:layout_constraintTop_toBottomOf="@+id/title_moviedetail" />
+
+    <TextView
+        android:id="@+id/tv_moviedetail_voteaverage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_placeholder"
+        app:layout_constraintBottom_toBottomOf="@+id/img_moviedetail_poster"
+        app:layout_constraintStart_toStartOf="@+id/title_moviedetail" />
+</androidx.constraintlayout.widget.ConstraintLayout>
